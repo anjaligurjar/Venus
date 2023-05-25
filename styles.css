@@ -1,44 +1,44 @@
 .accordion {
-  color: #444;
+  background-color: rgb(156, 38, 38);
+  color: rgb(171, 197, 100);
   cursor: pointer;
   padding: 18px;
-  background-color: rgb(25, 117, 148);
   width: 100%;
   text-align: left;
   border: none;
-  border-radius: 50%;
   outline: none;
   transition: 0.4s;
+  transform: rotateX(row);
 }
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: rgb(94, 168, 123);
 }
+
 
 .panel {
   padding: 0 18px;
-
+  background-color: white;
+  display: none;
   overflow: hidden;
-  border-radius: 50%;
-}
-.accordion:after {
-  content: '\02795';
-  font-size: 13px;
-  color: rgb(35, 127, 150);
-  float: right;
-  margin-left: 5px;
 }
 
-.active:after {
-  content: '\2796';
-}
 .panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  border-radius: 100px;
-  border: 1px solid #3d828e;
+}
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796'; 
 }
